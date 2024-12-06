@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_menu_tab_5"
+    android:padding="16dp"> <!-- Padding general para darle espacio al contenido -->
+
+    <!-- Título en negrita y centrado -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solicitar Aumento De Crédito"
+        android:textSize="30sp"
+        android:textColor="#FDFDFD"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <!-- Espacio decorativo entre título y subtítulo -->
+    <TextView
+        android:id="@+id/spaceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="."
+        android:textSize="1sp"
+        android:textColor="#F682A4"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Subtítulo con un texto más pequeño -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese lo que se pide a continuación:"
+        android:textSize="16sp"
+        android:textColor="#FFE1F3"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/spaceText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <!-- Campo de texto para Comprobante de Domicilio -->
+    <EditText
+        android:id="@+id/edtComprobanteDomicilio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:hint="Comprobante de Domicilio"
+        android:minHeight="48dp"
+        android:focusable="false"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para seleccionar Comprobante de Domicilio -->
+    <Button
+        android:id="@+id/btnComprobanteDomicilio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Comprobante de Domicilio (PDF)"
+        android:backgroundTint="#831DA2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtComprobanteDomicilio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Campo de texto para INE o Fotografía -->
+    <EditText
+        android:id="@+id/edtINE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:hint="INE o Fotografía"
+        android:minHeight="48dp"
+        android:focusable="false"
+        app:layout_constraintTop_toBottomOf="@id/btnComprobanteDomicilio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón para seleccionar INE o Fotografía -->
+    <Button
+        android:id="@+id/btnINE"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar INE o Fotografía"
+        android:backgroundTint="#831DA2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtINE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Vista previa de la imagen INE -->
+    <ImageView
+        android:id="@+id/imgINE"
+        android:layout_width="123dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Vista Previa INE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnINE" />
+
+    <!-- Botón para enviar solicitud -->
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enviar Solicitud"
+        android:backgroundTint="#78052C"
+        android:textColor="#FDFDFD"
+        app:layout_constraintTop_toBottomOf="@id/imgINE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Botón para regresar al menú -->
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Regresar al Menú"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/btnAceptar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

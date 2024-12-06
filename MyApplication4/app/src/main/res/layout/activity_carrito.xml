@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_background_login_up">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Carrito De Compras"
+                android:textSize="34sp"
+                android:textColor="#D71A58"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Subtítulo -->
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catálogo de productos:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="20dp" />
+
+            <!-- GridLayout para productos -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnProducto1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Conjunto F."
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnProducto2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Conjunto M."
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnProducto3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Accesorio"
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnProducto4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Collar de mariposa"
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnProducto5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Reloj m."
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnProducto6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Celular Samsung"
+                    android:backgroundTint="#D71A58"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+            </GridLayout>
+
+            <!-- ListView para mostrar los productos en el carrito -->
+
+            <!-- Total -->
+            <ListView
+                android:id="@+id/listViewCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="399dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total: $0"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botones de acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/btnDisminuirCantidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Disminuir Cantidad"
+                    android:backgroundTint="#831DA2"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnEliminarProducto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Eliminar Producto"
+                    android:backgroundTint="#831DA2"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+
+                <Button
+                    android:id="@+id/btnVaciarCarrito"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vaciar Carrito"
+                    android:backgroundTint="#831DA2"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="8dp" />
+            </LinearLayout>
+
+            <!-- Botones de navegación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menú"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnRegresarConsulta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regresar a Consulta"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
